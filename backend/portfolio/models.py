@@ -83,3 +83,22 @@ class Education(models.Model):
     
     def __str__(self):
         return f"{self.qualification} at {self.institution}"
+
+#------------Blog Model------------#
+class BlogPost(models.Model):
+    STATUS_CHOICES = [
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+    ]
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(unique=True)
+    summary = models.CharField(max_length=500)
+    content = models.TextField()
+    cover_image = models.ImageField(upload_to='blog/covers/')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='draft')
+    published_at = models.DateTimeField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.title
