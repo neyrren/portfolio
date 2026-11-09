@@ -39,6 +39,7 @@ class Project(models.Model):
     github_url=models.URLField(blank=True, null=True)
     live_url=models.URLField(blank=True, null=True)
     cover_image=models.ImageField(upload_to='project/covers/')
+    featured=models.BooleanField(default=False)
     status=models.CharField(max_length=20, choices=STATUS_CHOICES, default='in_progress')
     created_at=models.DateTimeField(auto_now_add=True)
     
@@ -110,6 +111,7 @@ class ContactMessage(models.Model):
     subject = models.CharField(max_length=200)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    is_read = models.BooleanField(default=False)
     
     def __str__(self):
         return f"Message from {self.name} - {self.subject}" 
