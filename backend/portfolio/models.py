@@ -10,6 +10,8 @@ class Skill(models.Model):
         ('mobile', 'Mobile Development'),
         ('database', 'Database'),
         ('design', 'UI/UX Design'),
+        ('ai_ml', 'AI & Machine Learning'),
+        ('iot', 'IoT & Hardware'),
         ('tool', 'Tools & Technologies'),
     ]
     
