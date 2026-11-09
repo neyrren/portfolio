@@ -35,6 +35,19 @@ class EducationSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'created_at']    
         
        
+ #------------BlogPost Serializer------------#
+class BlogPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogPost
+        fields = ['id', 'title', 'slug', 'summary', 'content', 'status', 'published_at', 'created_at']
+        read_only_fields = ['id', 'created_at']
         
+        
+#------------ContactMessage Serializer------------#
+class ContactMessageSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = ContactMessage
+        fields = ['id', 'name', 'email', 'subject', 'message', 'is_read', 'created_at']
+        read_only_fields = ['id', 'is_read', 'created_at']              
                     
         
