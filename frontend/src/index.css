@@ -1,28 +1,32 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
+@import "tailwindcss";
+
 :root {
-  font-family: 'DM Sans', sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  --color-portfolio-bg: #080811;
+  --color-portfolio-surface: #11111f;
+  --color-portfolio-cyan: #38e8ff;
+  --color-portfolio-purple: #a56bff;
+  --color-portfolio-pink: #ed6aff;
+  --color-portfolio-muted: #9696aa;
+}
+
+:root {
+  font-family: var(--font-sans);
   color: #f4f4fb;
-  background: #080811;
+  background: var(--color-portfolio-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --color-background: #080811;
-  --color-surface: #10101d;
-  --color-text: #f4f4fb;
-  --color-muted: #9696aa;
-  --color-cyan: #38e8ff;
-  --color-purple: #a56bff;
-
-  --font-heading: 'Space Grotesk', sans-serif;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -31,9 +35,10 @@ html {
 }
 
 body {
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--color-background);
+  background: var(--color-portfolio-bg);
 }
 
 button,
@@ -47,11 +52,68 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+::selection {
+  color: #080811;
+  background: #38e8ff;
+}
+
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  --color-portfolio-bg: #080811;
+  --color-portfolio-surface: #11111f;
+  --color-portfolio-cyan: #38e8ff;
+  --color-portfolio-purple: #a56bff;
+  --color-portfolio-pink: #ed6aff;
+  --color-portfolio-muted: #9696aa;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: #f4f4fb;
+  background: var(--color-portfolio-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-portfolio-bg);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 ::selection {
   color: #080811;
-  background: var(--color-cyan);
+  background: #38e8ff;
 }
+*/
