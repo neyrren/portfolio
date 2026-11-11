@@ -40,7 +40,7 @@ class Project(models.Model):
     technologies=models.ManyToManyField(Skill, related_name='projects')
     github_url=models.URLField(blank=True, null=True)
     live_url=models.URLField(blank=True, null=True)
-    cover_image=models.ImageField(upload_to='project/covers/')
+    cover_image=models.ImageField(upload_to='project/covers/', blank=True, null=True)
     featured=models.BooleanField(default=False)
     status=models.CharField(max_length=20, choices=STATUS_CHOICES, default='in_progress')
     created_at=models.DateTimeField(auto_now_add=True)
