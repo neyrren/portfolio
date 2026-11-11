@@ -30,3 +30,7 @@ coverage/
 # Operating system
 .DS_Store
 Thumbs.db
+
+# Django uploaded media
+backend/media/
+backend/blog/
